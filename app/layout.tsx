@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { ibm_Plex_Sans } from "./ui/fonts";
 import "./globals.css";
 import { Providers } from "./providers";
-
-const inter = Inter({ subsets: ["latin"] });
+import Nav from "@/app/ui/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,8 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body>
-        <Providers>{children}</Providers>
+      <body className={`${ibm_Plex_Sans.className} antialiased`}>
+        <Providers>
+          <Nav />
+          {children}
+        </Providers>
       </body>
     </html>
   );
