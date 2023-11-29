@@ -23,7 +23,7 @@ export default function Nav() {
         <NavbarItem>
           <Link color="foreground" href="./" className="text-white font-bold">
             {pathname === "/" && (
-              <span className="text-[#FF11AA] mr-2">&#x2022;</span>
+              <span className="text-custom_primary mr-2">&#x2022;</span>
             )}
             Accueil
           </Link>
@@ -35,7 +35,7 @@ export default function Nav() {
             className="text-white font-bold"
           >
             {pathname === "/Playlists" && (
-              <span className="text-[#FF11AA] mr-2">&#x2022; </span>
+              <span className="text-custom_primary mr-2">&#x2022; </span>
             )}
             Playlists
           </Link>
@@ -43,7 +43,7 @@ export default function Nav() {
         <NavbarItem>
           <Link className="text-white font-bold" href="./Direct">
             {pathname === "/Direct" && (
-              <span className="text-[#FF11AA] mr-2">&#x2022; </span>
+              <span className="text-custom_primary mr-2">&#x2022; </span>
             )}
             Direct
           </Link>
