@@ -3,6 +3,7 @@ import { ibm_Plex_Sans } from "./ui/fonts";
 import "./globals.css";
 import { Providers } from "./providers";
 import Nav from "@/app/ui/components/Navbar";
+import Footer from "@/app/ui/components/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Providers>
           <Nav />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
