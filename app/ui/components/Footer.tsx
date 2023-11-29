@@ -24,7 +24,7 @@ function Footer() {
             width={24}
             height={24}
             alt="logo X (Twitter)"
-          />{" "}
+          />
         </li>
         <li>
           <Image

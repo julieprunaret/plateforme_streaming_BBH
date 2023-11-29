@@ -35,3 +35,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}

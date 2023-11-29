@@ -22,7 +22,7 @@ export default function CardVideo({
   viewsNumber,
 }: CardVideoProps) {
   return (
-    <Card className="py-4 bg-transparent w-fit m-0 shadow-none">
+    <Card className={`py-4 bg-transparent min-w-fit m-0 shadow-none`}>
       <CardBody className="overflow-visible pb-2 p-0">
         {views && (
           <div className="h-16 bg-gradient-to-t from-[#ff11ac5e] ...">
@@ -40,7 +40,11 @@ export default function CardVideo({
           src={`https://youtube.com/embed/${youtubeID}?autoplay=0`}
         ></iframe>
       </CardBody>
-      <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+      <CardHeader
+        className={`pb-0 pt-2 px-4 flex-col items-start w-[${
+          isLarge ? 467 : 304
+        }px]`}
+      >
         <p className="text-tiny uppercase font-bold">{subtitle}</p>
         <small className="text-default-500">{title}</small>
         <h4 className="font-bold text-large">{smallText}</h4>
