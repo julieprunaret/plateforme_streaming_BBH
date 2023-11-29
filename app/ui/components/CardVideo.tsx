@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
+import { Card, CardHeader, CardBody } from "@nextui-org/react";
 //import YouTube from "react-youtube";
 //amélioration : utiliser react-youtube
 interface CardVideoProps {
@@ -7,6 +7,9 @@ interface CardVideoProps {
   subtitle?: string;
   title: string;
   smallText: string;
+  isLarge?: boolean;
+  views?: boolean;
+  viewsNumber?: number;
 }
 
 export default function CardVideo({
@@ -14,13 +17,23 @@ export default function CardVideo({
   subtitle,
   title,
   smallText,
+  isLarge = false,
+  views = false,
+  viewsNumber,
 }: CardVideoProps) {
   return (
     <Card className="py-4 bg-transparent w-fit m-0 shadow-none">
       <CardBody className="overflow-visible pb-2 p-0">
+        {views && (
+          <div className="h-16 bg-gradient-to-t from-[#ff11ac5e] ...">
+            <span className="shadow font-bold text-fill-white text-5xl mb-2 ml-2">
+              {viewsNumber}K
+            </span>
+          </div>
+        )}
         <iframe
-          width={304}
-          height={168}
+          width={isLarge ? 467 : 304}
+          height={isLarge ? 462 : 168}
           className="video"
           title="Youtube player"
           sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"

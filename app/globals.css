@@ -18,6 +18,14 @@
   }
 }
 
+/* custom class pour le nomvre de vues sur les vignettes de vidéos */
+.text-fill-white {
+  fill: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  stroke: 3px #ff11aa;
+  -webkit-text-stroke: 1px #ff11aa;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
